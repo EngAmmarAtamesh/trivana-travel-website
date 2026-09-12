@@ -1,0 +1,381 @@
+:root {
+    --teal: #145C6B;
+    --mint: #8DBEAB;
+    --white: #FFFFFF;
+    --background: #F4F7F5;
+    --text: #163C44;
+    --gray: #777777;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, sans-serif;
+}
+/* Navbar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 14px 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: white !important;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.navbar-brand i {
+    color: var(--mint);
+    font-size: 26px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+    padding: 7px 14px;
+    border-radius: 15px;
+    background: white;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 14px !important;
+    color: #111;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--teal);
+}
+
+.book-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: 24px;
+    color: var(--teal) !important;
+    font-weight: bold;
+}
+
+.book-link span {
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    padding: 8px 11px;
+    border: 0;
+    border-radius: 9px;
+    background: white;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+/* Hero */
+.contact-hero{
+    position: relative;
+    width: 96%;
+    height: 90vh;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 25px;
+}
+/* Image */
+.contact-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* Text */
+.contact-text{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    width: 50%;
+    animation: textMove 1.5s ease-out;
+}
+.small-tittle{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+.contact-text h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+.contact-text p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* Animation */
+@keyframes textMove{
+
+    from{
+        opacity: 0;
+        transform: translateY(-40%);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(-50%);
+    }
+
+}
+
+.contact-section{
+    width: 85%;
+    margin: 60px auto;
+    display: flex;
+    gap: 50px;
+}
+.contact-info,
+.contact-form{
+    width: 50%;
+}
+.contact-info h5{
+    color: #e5aa00;
+    font-size: 18px;
+}
+.contact-info h2{
+    font-size: 35px;
+    margin: 15px 0;
+}
+.contact-info p{
+    color: #777;
+    line-height: 1.6;
+}
+.contact-info img{
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+.contact-form{
+    background: white;
+    padding: 35px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px #ddd;
+}
+.contact-form h2{
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+.name-inputs{
+    display: flex;
+    gap: 15px;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+.name-inputs input{
+    width: 50%;
+}
+.contact-form textarea{
+    height: 120px;
+}
+.contact-form button{
+    padding: 8px 8px 8px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #e5aa00;
+    color: white;
+    font-size: 15px;
+}
+.contact-form button span{
+    background: black;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+
+.contact-details{
+    width: 85%;
+    margin: 50px auto;
+    display: flex;
+    gap: 20px;
+}
+
+.detail-card{
+    width: 25%;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px #eee;
+    text-align: center;
+    transition: 0.3s;
+}
+.detail-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px #ddd;
+}
+.detail-icon{
+    font-size: 30px;
+    color: #e5aa00;
+    margin-bottom: 15px;
+}
+
+.detail-card h3{
+    margin-bottom: 10px;
+}
+
+.detail-card p{
+    color: #888;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.map-section{
+    width: 90%;
+    margin: 60px auto;
+    text-align: center;
+}
+.map-title h5{
+    color: #e5aa00;
+    margin-bottom: 10px;
+}
+.map-title h2{
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+.map{
+    width: 95%;
+    height: 500px;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.footer{
+    background-image:
+    linear-gradient(
+        rgba(20, 92, 107, 0.82),
+        rgba(20, 92, 107, 0.82)
+    ),
+    url("../images/Switzerland.jpeg");
+    color: white;
+    padding: 60px 7% 20px;
+}
+
+.footer .row{
+    display: flex;
+    gap: 40px;
+}
+
+.footer .col-lg-4,
+.footer .col-lg-2,
+.footer .col-lg-3{
+    width: 25%;
+}
+
+.footer-brand a{
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.footer-brand p{
+    color: #ddd;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.footer-social{
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social a{
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links h3,
+.footer-contact h3{
+    color: white;
+    margin-bottom: 20px;
+}
+
+.footer-links a{
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-contact p{
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.footer-contact i{
+    color: #e5aa00;
+    margin-right: 8px;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff33;
+}
+
+.footer-bottom p,
+.footer-bottom a{
+    color: #ddd;
+    font-size: 14px;
+}
+
+.footer-bottom a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+@media (max-width: 768px){
+    .footer .row{
+        flex-direction: column;
+    }
+    .footer .col-lg-4,
+    .footer .col-lg-2,
+    .footer .col-lg-3{
+        width: 100%;
+    }
+}
